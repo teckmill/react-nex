@@ -24,7 +24,7 @@ jobs:
 
       - name: Build Expo app
         run: |
-          npx expo build:android --no-publish
-          npx expo build:ios --no-publish
+          npx eas build -p android --no-publish
+          npx eas build -p ios --no-publish
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
